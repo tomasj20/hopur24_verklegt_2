@@ -54,3 +54,8 @@ gera töflu með 3 dálkum merktir (UI,LL,DB) og þegar öll virkni er útfærð
 -Gera grunnsíðu (header) og forsíðu í UI layer - Halldór
 -Útfæra virkni á forsíðu/header í LL - Daníel
 -Útfæra gagnagrunn samkvæmt ER diagram - Tommi//Búið -- yfirferð
+Dagbók Miðvikudagur 05.04.2021
+-Gera HTML og CSS fyrir:
+  ->Villuboð--Tommi//Komið langleiðina
+  ->Admin actions forsíða --Tommi
+  ->Reyna tengja databasein við forritið
