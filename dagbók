@@ -1,0 +1,56 @@
+Dagbók Mánudag 26.04.2021
+Gera inngang - Tommi//Búið--yfirferð
+Lista kröfur - Tommi//Búið--yfirferð
+Use cases - Tommi//Búið--yfirferð
+Describe user groups and analysis - Halldór//Búið--yfirferð
+Wireframes and prototype interviews - DanniHT
+
+Dagbók Þriðjudag 27.04.2021
+Compare application to other similar application -- Tommi// samanburður kominn vantar wireframe
+Use case diagram -- Tommi/Halldór //Class diagram búið --yfirferð(ekki 100p), eitt state machine komið(log-in)
+Statistics -- Halldór
+Usability goals -- DanniHT/Halldór
+Big picture map -- DanniHT
+
+Dagbók Miðvikudag 28.04.2021
+Gera efnisyfirlit - Tommi//Búið
+Gera happy path - Tommi
+Fara yfir allt - Allir
+Gera sequence diagram - Halldór
+Gera niðurlag - Tommi
+//allt búið!! skil
+Gera inngang//Done
+Byrja á prototypes//Byrjaðir
+User testing//ekki byrjaðir
+Class diagram --Byrjaðir
+State diagram --Byrjaðir//Búnir
+
+Dagbók Fimmtudag 29.04.2021
+User testing - Tommi// Búið
+Prototypes - DanniHT
+Navigation Diagram - Halldór
+Programming Rules - Danni
+Flow chart - Halldór
+Next steps and changes - Tommi//Búið
+Class diagram - Tommi//Búið
+Forritunar reglur - Tommi// Búið nema fyrir python
+
+Dagbók Föstudag 30.04.2021
+Klára forritunar reglur - Tommi//Búið
+Flow chart - Tommi og Halldór//Búið
+Database diagram - Danni
+Fleiri State machine diagrams - Halldór
+Yfirferð - Allir
+
+Dagbók Mánudagur 03.04.2021
+-Byrja leggja grunn fyrir Datalayer - Tommy on the track
+-Byrja leggja grunn fyrir LL - Daníel
+-Byrja leggja grunn fyrir UI - dóri
+
+Dagbók Þriðjudagur 04.004.2021
+-
+-Gera skjal þar sem við förum yfir hverja síðu og ákveðum hvaða virkni þarf að útfæra í hverju Layer,
+gera töflu með 3 dálkum merktir (UI,LL,DB) og þegar öll virkni er útfærð í hverju layer á síðunni þá hökum við við. -Daníel/Dóri/Tommi
+-Gera grunnsíðu (header) og forsíðu í UI layer - Halldór
+-Útfæra virkni á forsíðu/header í LL - Daníel
+-Útfæra gagnagrunn samkvæmt ER diagram - Tommi//Búið -- yfirferð
