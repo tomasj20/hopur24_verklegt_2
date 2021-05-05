@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forsíða</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+    <script src="HomePage.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Ship O' Cereal</h1>
+        <input type="text" placeholder="Leita.." class="searchBar">
+        <button class="UserButton">
+            Aðgangur
+             <img src="{% static 'user.png' %}" alt="userIcon" class="userIMG">
+        </button>
+        <button class="CartButton">
+            Karfa
+            <img src="{% static 'cart.png' %}" alt="cartIcon" class="cartIMG">
+        </button>
+    </div>
+
+
+</body>
+</html>
