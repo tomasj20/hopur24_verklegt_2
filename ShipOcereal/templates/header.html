@@ -1,11 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Forsíða</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
-    <script src="HomePage.js"></script>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
 </head>
 <body>
     <div class="header">
@@ -13,14 +13,19 @@
         <input type="text" placeholder="Leita.." class="searchBar">
         <button class="UserButton">
             Aðgangur
-             <img src="{% static 'user.png' %}" alt="userIcon" class="userIMG">
+             <img src="{% static 'images/user.png' %}" alt="userIcon" class="userIMG">
         </button>
         <button class="CartButton">
             Karfa
-            <img src="{% static 'cart.png' %}" alt="cartIcon" class="cartIMG">
+            <img src="{% static 'images/cart.png' %}" alt="cartIcon" class="cartIMG">
         </button>
     </div>
 
+    <div class="categories-header">
+        <div class="category" id="healthy">
+            <h2>Heilsu</h2>
+        </div>
+    </div>
 
 </body>
 </html>
