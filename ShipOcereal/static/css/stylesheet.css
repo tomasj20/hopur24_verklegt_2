@@ -1,0 +1,85 @@
+.body{
+    width:100%;
+    height:100%;
+}
+
+.header{
+    position:fixed;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:120px;
+    background:white;
+    border-bottom:solid black;
+
+}
+
+.header h1{
+    display:block;
+    position:relative;
+    color:#6DDDDD;
+    font-size:30px;
+    font-family:Arial;
+    top:20px;
+    left:30px;
+}
+
+.UserButton{
+    background:transparent;
+    display:inline-block;
+    position:relative;
+    font-size:23px;
+    top:-80px;
+    left:87%;
+    border:0px;
+}
+.CartButton{
+    background:transparent;
+    display:inherit;
+    position:relative;
+    font-size:23px;
+    top:-70px;
+    left:90%;
+    border:0px;
+}
+.userIMG{
+    display:inline-block;
+    position:relative;
+    width:15px;
+    left:0%;
+}
+.cartIMG{
+    display:inline-block;
+    position:relative;
+    width:15px;
+    left:0%;
+}
+
+.searchBar{
+    display:inherit;
+    position:relative;
+    margin:auto;
+    width:500px;
+    height:30px;
+    top:-30px;
+    font-size:24px;
+}
+.searchButton{
+    display:inline-block;
+    position:fixed;
+    top:100%;
+}
+
+.categories-header {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: -40%;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    background-color: #e9e9e9;
+}
