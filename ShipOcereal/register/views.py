@@ -4,4 +4,4 @@ TEMPLATE_DIRS = (
     'os.path.join(BASE_DIR, "templates"),'
 )
 def index(request):
-    return render(request, "healthy.html")
+    return render(request, "register/placeholder.html")

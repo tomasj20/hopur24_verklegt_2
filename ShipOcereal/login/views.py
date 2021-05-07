@@ -6,4 +6,4 @@ TEMPLATE_DIRS = (
     'os.path.join(BASE_DIR, "templates"),'
 )
 def index(request):
-    return render(request, "login.html")
+    return render(request, "login/login.html")

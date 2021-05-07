@@ -9,23 +9,32 @@
 </head>
 <body>
     <div class="header">
-        <h1>Ship O' Cereal</h1>
+        <button class="headerText" onclick="navToFrontPage()">Ship O' Cereal</button>
         <input type="text" placeholder="Leita.." class="searchBar">
-        <button class="UserButton">
+        <button class="UserButton" onclick="navToLoginPage()">
             Aðgangur
              <img src="{% static 'images/user.png' %}" alt="userIcon" class="userIMG">
         </button>
-        <button class="CartButton">
+        <button class="CartButton" onclick="navToCart()">
             Karfa
             <img src="{% static 'images/cart.png' %}" alt="cartIcon" class="cartIMG">
         </button>
     </div>
 
     <div class="categories-header">
-        <div class="category" id="healthy">
+        <button class="category" id="healthy" onclick="navToHealthyFilter()">
             <h2>Heilsu</h2>
-        </div>
+        </button>
+
+        <button class="category" id="sugary" onclick="navToSugaryFilter()">
+            <h2>Sætt</h2>
+        </button>
+
+        <button class="category" id="vegan" onclick="navToVeganFilter()">
+            <h2>Vegan</h2>
+        </button>
     </div>
 
+<script src="{% static 'js/header.js' %}"></script>
 </body>
 </html>

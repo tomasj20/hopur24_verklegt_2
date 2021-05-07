@@ -5,8 +5,10 @@ TEMPLATE_DIRS = (
 )
 
 def healthyIndex(request):
-    return render(request, "healthy.html")
+    return render(request, "filter/healthy.html")
+
 def sugaryIndex(request):
-    return render(request, "sugary.html")
+    return render(request, "filter/sugary.html")
+
 def veganIndex(request):
-    return render(request, "vegan.html")
+    return render(request, "filter/vegan.html")
