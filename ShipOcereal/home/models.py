@@ -15,6 +15,6 @@ class Cereal(models.model):
     onSale = models.BooleanField()
 
 class cerealImage(models.model):
-    image = models.CharField(max_length = 9999)
+    image = models.CharField(max_length=9999)
     cereal = models.ForeignKey(Cereal, on_delete=models.CASCADE)
 
