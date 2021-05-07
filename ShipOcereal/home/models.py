@@ -12,7 +12,12 @@ class Cereal(models.model):
     category = models.ForeignKey(cerealCategory, on_delete=models.CASCADE)
     price = models.FloatField()
     inStock = models.BooleanField()
-    onSale = models.BooleanField()
+    onSale = models.FloatField(default=0, blank=True)
+    total = models.IntegerField(blank=True, null=True)
+    image = models.ManyToManyField(image)
+
+    def calculate_total(self):
+        self.total = self.price * ((100 - self.discount)/100)
 
 class cerealImage(models.model):
     image = models.CharField(max_length=9999)
