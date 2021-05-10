@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'Ship-o-cereal-db',
         'USER': 'ship-o-cereal-user',
         'PASSWORD': 'DHT123',
-        'HOST': '89.160.176.16',
+        'HOST': '34.121.39.88',
         'PORT': '5432'
     }
 }
