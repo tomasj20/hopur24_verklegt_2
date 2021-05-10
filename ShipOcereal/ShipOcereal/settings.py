@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'login',
     'register',
     'filter',
-    'cart'
+    'cart',
+    'user'
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ DATABASES = {
         'NAME': 'Ship-o-cereal-db',
         'USER': 'ship-o-cereal-user',
         'PASSWORD': 'DHT123',
-        'HOST': '34.121.39.88',
+        'HOST': '130.208.240.12',
         'PORT': '5432'
     }
 }
