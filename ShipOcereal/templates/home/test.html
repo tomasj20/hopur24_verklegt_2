@@ -1,4 +1,9 @@
 {% extends 'header.html' %}
 {% block content %}
-    <p>Welcome to the homepage</p>
+    <h1 class="red">Cereal Products</h1>
+    <div class="Cereals">
+        {% for cereal in Cereals %}
+            {% include 'home/single_cereal.html' with cereal=cereal %}
+        {% endfor %}
+    </div>
 {% endblock %}
