@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 class country(models.Model):
     country_name = models.CharField(max_length=100)
+
     def __str__(self):
         return self.country_name
 
