@@ -1,4 +1,39 @@
 {% extends 'header.html' %}
+{% load static %}
 {% block content %}
-    <p>Welcome to the Registry page</p>
+
+    <div class="container">
+    <div class="title">Nýskráning</div>
+    <div class="content">
+      <form method="POST" action="">
+          {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Notendanafn</span>
+              {{form.username}}
+          </div>
+          <div class="input-box">
+            <span class="details">Netfang</span>
+            {{form.email}}
+          </div>
+          <div class="input-box">
+            <span class="details">Lykilorð</span>
+            {{form.password1}}
+          </div>
+          <div class="input-box">
+            <span class="details">Staðfestu lykilorð</span>
+            {{form.password2}}
+          </div>
+        </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" name="Create User">
+        </div>
+      </form>
+    {{ form.errors }}
+    </div>
+  </div>
+
+    </form>
 {% endblock %}
