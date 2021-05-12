@@ -281,6 +281,7 @@ form .input-box span.details{
 .user-details .input-box input:valid{
   border-color: #9b59b6;
 }
+
 .cereal-img{
     display:block;
     width: 250px;
