@@ -33,9 +33,15 @@ def create_cereal(request):
             cerealImage = dict(request.POST)['image']
             create_images(cerealImage, Cereal)
             cereal.save()
+            return redirect('index')
     else:
         form = CerealCreateForm()
         #TODO: CREATE NEW INSTANCE CerealCreateForm()
     return render(request, 'home/create_cereal.html', {
         'form': form
     })
+
+def delete_cereal(request, id):
+    cereal = get_object_or_404(Cereal, pk=id)
+    Cereal.delete()
+    return redirect('index')
