@@ -221,7 +221,7 @@ input[type="submit"]:hover{
     display:block;
     width:100%;
     border-top:solid black;
-    top:110%;
+    top:300%;
 }
 
 .container{
@@ -292,15 +292,17 @@ form .input-box span.details{
     margin-left:auto;
     margin-bottom:15px;
 
-
 }
 
 .singleCerealContainer{
     display:block;
+    position:relative;
     float:right;
-    margin:10px;
+    margin:5px;
+    margin-bottom:60px;
     width: 300px;
     height: 300px;
+
 }
 .singleCerealImageAndName{
     display:block;
@@ -319,10 +321,12 @@ form .input-box span.details{
 
 
 .Cereals{
-    position:absolute;
-    transform: translate(-7.25%, -50%);
+    position:relative;
     margin:0;
-    top:65%;
+    bottom:0%;
+    width:100%;
+    height:100%;
+    margin-top:250px;
 
 }
 
