@@ -1,0 +1,8 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+    <img class="cereal-img" src="{{ cereal.image.path }}"/>
+    <h2>{{ cereal.name }}</h2>
+    <p>{{ cereal.description }}</p>
+    <h4> {{ cereal.price }} </h4>
+{% endblock %}
