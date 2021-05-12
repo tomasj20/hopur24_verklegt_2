@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from home.models import Cereal, cerealImage
-from home.forms.cereal_form import CerealCreateForm, CerealUpdateForm
+from home.forms.cereal_form import CerealCreateForm
 import datetime
 from django.http import HttpResponse
 # Create your views here.
@@ -24,15 +24,16 @@ def create_images(cerealImage, Cereal):
             image.save()
             Cereal.image.add(image)
 
+def loadImage(path):
+    if path != '':
+        image = cerealImage(image='Placeholder', path=path)
+        return image
+
 def create_cereal(request):
     if request.method == 'POST':
-        form = CerealCreateForm(request.POST)
+        form = CerealCreateForm(data=request.POST)
         if form.is_valid():
             cereal = form.save()
-            cereal.initialize()
-            cerealImage = dict(request.POST)['image']
-            create_images(cerealImage, Cereal)
-            cereal.save()
             return redirect('http://127.0.0.1:8000/')
     else:
         form = CerealCreateForm()
