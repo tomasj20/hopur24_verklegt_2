@@ -221,7 +221,7 @@ input[type="submit"]:hover{
     display:block;
     width:100%;
     border-top:solid black;
-    bottom:0;
+    top:300%;
 }
 
 .container{
@@ -292,7 +292,6 @@ form .input-box span.details{
     margin-left:auto;
     margin-bottom:15px;
 
-
 }
 
 .singleCerealContainer{
@@ -324,9 +323,10 @@ form .input-box span.details{
 .Cereals{
     position:relative;
     margin:0;
-    top:65%;
+    bottom:0%;
     width:100%;
     height:100%;
+    margin-top:250px;
 
 }
 
