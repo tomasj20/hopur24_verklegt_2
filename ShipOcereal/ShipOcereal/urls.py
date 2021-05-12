@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
+from home.models import Cereal
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,5 +24,6 @@ urlpatterns = [
     path('login/',include('login.urls')),
     path('register/',include('register.urls')),
     path('filter/',include('filter.urls')),
-    path('cart/',include('cart.urls'))
+    path('cart/',include('cart.urls')),
+    path('<int:id>',include('home.urls'))
 ]
