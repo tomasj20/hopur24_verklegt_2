@@ -33,7 +33,7 @@ def create_cereal(request):
             cerealImage = dict(request.POST)['image']
             create_images(cerealImage, Cereal)
             cereal.save()
-            return redirect('index')
+            return redirect('http://127.0.0.1:8000/')
     else:
         form = CerealCreateForm()
         #TODO: CREATE NEW INSTANCE CerealCreateForm()
@@ -43,5 +43,5 @@ def create_cereal(request):
 
 def delete_cereal(request, id):
     cereal = get_object_or_404(Cereal, pk=id)
-    Cereal.delete()
-    return redirect('index')
+    cereal.delete()
+    return redirect('http://127.0.0.1:8000/')

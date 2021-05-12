@@ -1,11 +1,11 @@
 from django.forms import ModelForm, widgets
+from django.shortcuts import get_object_or_404
 from django import forms
 from home.models import Cereal, cerealCategory
 
 
 class CerealCreateForm(ModelForm):
     image = forms.CharField(required='True', widget=forms.TextInput(attrs={ 'class': 'form-control'}))
-    'cereal': get_object_or_404(Cereal, pk=id)
     class Meta:
         model = Cereal
         exclude = ['id', 'image', 'total']
