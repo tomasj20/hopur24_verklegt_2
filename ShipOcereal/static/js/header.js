@@ -27,3 +27,4 @@ function navToCart(){
     console.log('Hello cart page')
     return location.href = 'http://127.0.0.1:8000/cart'
 }
+

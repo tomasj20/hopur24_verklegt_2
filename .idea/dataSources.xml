@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Ship-o-cereal-db@34.121.39.88 [2]" uuid="3d886406-e593-48d4-bee6-3b64c2415f9d">
+    <data-source source="LOCAL" name="Ship-o-cereal-db" uuid="2435c86d-c1a4-4f21-a910-d16214cbd6c4">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://34.121.39.88:5432/Ship-o-cereal-db</jdbc-url>
+      <jdbc-url>jdbc:postgresql://34.121.39.88:5432/postgres</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

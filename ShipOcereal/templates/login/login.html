@@ -1,4 +1,29 @@
 {% extends 'header.html' %}
+{% load static %}
 {% block content %}
-    <p>Welcome to the login</p>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <div class="center">
+      <h1>Innskráning</h1>
+      <form method="POST" name="loginForm" class="loginForm" action="" >
+          {% csrf_token %}
+        <div class="txt_field">
+          <input type="text" required name="username">
+          <span></span>
+          <label class="username">Notendanafn</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" required name="password">
+          <span></span>
+          <label class="password">Lykilorð</label>
+        </div>
+        <div class="pass">Gleymt lykilorð?</div>
+        <input type="submit"  value="Skrá Inn">
+        <div class="signup_link">
+          Ekki með aðgang? <a href="http://127.0.0.1:8000/register">Nýskráning</a>
+      </form>
+    </div>
+
+    {% for message in messages %}
+        <p id="messages">{{ message }}</p>
+    {% endfor %}
 {% endblock %}
