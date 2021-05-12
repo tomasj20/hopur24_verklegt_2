@@ -21,6 +21,7 @@ def LoginPage(request):
 
         if user is not None:
             login(request,user)
+            messages.success(request, 'Account was created for ' + user)
             return redirect('http://127.0.0.1:8000/')
         else:
             messages.info(request, 'Username or Password is incorrect')
