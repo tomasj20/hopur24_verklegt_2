@@ -25,5 +25,6 @@ urlpatterns = [
     path('register/',include('register.urls')),
     path('filter/',include('filter.urls')),
     path('cart/',include('cart.urls')),
-    path('<int:id>',include('home.urls'))
+    path('<int:id>',include('home.urls')),
+    path('create_cereal', include('home.urls'))
 ]

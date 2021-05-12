@@ -28,6 +28,7 @@
     color:#6DDDDD;
     left:100px;
     font-weight: bolder;
+    cursor: pointer;
 
 }
 
@@ -39,6 +40,7 @@
     top:-50px;
     left:88%;
     border:0px;
+    cursor: pointer;
 }
 .CartButton {
     background: transparent;
@@ -49,18 +51,21 @@
     left: 83.1%;
     border: 0px;
     margin:0;
+    cursor: pointer;
 }
 .userIMG{
     display:inline-block;
     position:relative;
     width:15px;
     left:0%;
+    cursor: pointer;
 }
 .cartIMG{
     display:inline-block;
     position:relative;
     width:15px;
     left:0%;
+    cursor: pointer;
 }
 
 .searchBar{
@@ -104,6 +109,7 @@
     font-size:25px;
     font-family:Arial;
     color:#6DDDDD;
+    cursor: pointer;
 }
 .category:hover {
     background-color: lightblue;
@@ -340,6 +346,7 @@ form .input-box span.details{
     font-size: 18px;
     border: solid #8D8D8D;
     margin-left: 0;
+    cursor: pointer;
 }
 .addToCart{
     display: inline-block;
@@ -350,6 +357,7 @@ form .input-box span.details{
     color:#6DDDDD;
     font-size:18px;
     border:solid #8D8D8D;
+    cursor: pointer;
 
 
 }
