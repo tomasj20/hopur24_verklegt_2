@@ -1,6 +1,7 @@
 {% extends 'header.html' %}
+{% load static %}
 {% block content %}
-    <h1 class="red">Cereal Products</h1>
+<link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
     <div class="Cereals">
         {% for cereal in Cereals %}
             {% include 'home/single_cereal.html' with cereal=cereal %}

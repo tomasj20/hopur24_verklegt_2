@@ -1,11 +1,13 @@
 from django.shortcuts import render
-
+from home.models import Cereal
+from django.http import HttpResponse
 TEMPLATE_DIRS = (
     'os.path.join(BASE_DIR, "templates"),'
 )
 
 def healthyIndex(request):
-    return render(request, "filter/healthy.html")
+    context = {'Cereals': Cereal.objects.filter(category_id=1).order_by('name')}
+    return render(request, "filter/healthy.html",context)
 
 def sugaryIndex(request):
     return render(request, "filter/sugary.html")
