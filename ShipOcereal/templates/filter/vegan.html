@@ -1,4 +1,10 @@
 {% extends 'header.html' %}
+{% load static %}
 {% block content %}
-    <p>Welcome to the vegan</p>
+<link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <div class="Cereals">
+        {% for cereal in Cereals %}
+            {% include 'filter/single_cereal.html' with cereal=cereal %}
+        {% endfor %}
+    </div>
 {% endblock %}

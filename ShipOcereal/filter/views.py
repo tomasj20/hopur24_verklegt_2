@@ -10,7 +10,9 @@ def healthyIndex(request):
     return render(request, "filter/healthy.html",context)
 
 def sugaryIndex(request):
+    context = {'Cereals': Cereal.objects.filter(category_id=2).order_by('name')}
     return render(request, "filter/sugary.html")
 
 def veganIndex(request):
+    context = {'Cereals': Cereal.objects.filter(category_id=3).order_by('name')}
     return render(request, "filter/vegan.html")

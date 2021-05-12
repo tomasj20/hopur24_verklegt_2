@@ -295,14 +295,28 @@ form .input-box span.details{
 
 }
 
-.wellCereal{
+.singleCerealContainer{
     display:block;
     float:right;
     margin:10px;
     width: 300px;
     height: 300px;
-    text-align: center;
 }
+.singleCerealImageAndName{
+    display:block;
+    border-bottom:solid black;
+    margin:0;
+    margin-bottom:10px;
+}
+.singleCerealImageAndName h2{
+    padding:0;
+    margin:0;
+    margin-bottom:5px;
+    text-align: left;
+    font-size:18px;
+}
+
+
 
 .Cereals{
     position:absolute;
@@ -313,6 +327,7 @@ form .input-box span.details{
 }
 
 .sjáNánar {
+    display:inline-block;
     background: #AEAEAE;
     border: 0;
     font-weight: bolder;
@@ -320,8 +335,10 @@ form .input-box span.details{
     color: #6DDDDD;
     font-size: 18px;
     border: solid #8D8D8D;
+    margin-left: 0;
 }
 .addToCart{
+    display: inline-block;
     background:#AEAEAE;
     border:0;
     font-weight: bolder;
@@ -347,4 +364,9 @@ form .input-box span.details{
     text-underline: white;
     margin:0;
     margin-bottom:12px;
+}
+.singleCerealContainer button{
+    display:inline-block;
+    float:left;
+    margin:5px;
 }

@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
     <div class="Cereals">
         {% for cereal in Cereals %}
-            {% include 'home/single_cereal.html' with cereal=cereal %}
+            {% include 'filter/single_cereal.html' with cereal=cereal %}
         {% endfor %}
     </div>
 {% endblock %}

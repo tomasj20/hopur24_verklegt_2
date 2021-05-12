@@ -1,9 +1,11 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
-<div class="well cereal">
-    <a href="#">
-        <img class="cereal-img" src="{{ home.cerealimage_set.first.path }}"/>
-        <h4>{{ cereal.name }}</h4>
-        <p>{{ cereal.description }}</p>
-    </a>
+<div class="singleCerealContainer">
+    <div class="singleCerealImageAndName">
+        <img class="cereal-img" src="{{ cereal.image.path }}"/>
+        <h2>{{ cereal.name }}</h2>
+    </div>
+    <button class="sjáNánar">Sjá Nánar</button>
+    <button class="addToCart">Bæta í Körfu</button>
+    <h4>{{ cereal.price }} Kr</h4>
 </div>
