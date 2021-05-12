@@ -12,6 +12,6 @@ def index(request):
     return render(request, "home/test.html", context)
 
 def get_cereal_by_id(request, id):
-    return render(request, 'home/cereal_details.html'), {
+    return render(request, 'home/cereal_details.html', {
         'cereal': get_object_or_404(Cereal, pk=id)
-    }
+    })
