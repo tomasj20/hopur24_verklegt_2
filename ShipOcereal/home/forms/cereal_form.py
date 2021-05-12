@@ -1,20 +1,23 @@
 from django.forms import ModelForm, widgets
 from django import forms
-from home.models import Cereal
+from home.models import Cereal, cerealCategory
 
 
 class CerealCreateForm(ModelForm):
     image = forms.CharField(required='True', widget=forms.TextInput(attrs={ 'class': 'form-control'}))
+    'cereal': get_object_or_404(Cereal, pk=id)
     class Meta:
         model = Cereal
-        exclude = [ 'id', 'image', 'total' ]
+        exclude = ['id', 'image', 'total']
+
         widgets = {
-            'name': widgets.TextInput(attrs={ 'class': 'form-control', 'placeholder': 'Lucky Charms'}),
-            'manufacturer': widgets.TextInput(attrs={ 'class': 'form-control', 'placeholder': 'General Mills'}),
+            'name': widgets.TextInput(attrs={ 'class': 'form-control', 'placeholder': 'Cereal Name'}),
+            'manufacturer': widgets.TextInput(attrs={ 'class': 'form-control', 'placeholder': 'Producer'}),
             'quantity': widgets.NumberInput(attrs={'class': 'form-control', 'placeholder': 'How many units'}),
             'description': widgets.TextInput(attrs={ 'class': 'form-control', 'placeholder': 'Some description'}),
-            'category': widgets.Select(attrs={'class': 'form-control'}),
-            'price': widgets.NumberInput(attrs={'class': 'form-control', 'placeholder': 'How many units'}),
+            'category': widgets.Select(attrs={'class': 'form-control', 'placeholder': 'category'}),
+            'price': widgets.NumberInput(attrs={'class': 'form-control', 'placeholder': 'price'}),
             'discount': widgets.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Product discount'}),
-            'status': widgets.CheckboxInput(attrs={'class': 'checkbox'})
+            'status': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
+
         }

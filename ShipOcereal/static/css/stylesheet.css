@@ -382,3 +382,16 @@ form .input-box span.details{
     float:left;
     margin:5px;
 }
+
+.createCerealContainer{
+    background-color:#E9E9E9;
+    padding:50px;
+    display:block;
+    position: absolute;
+    top:50%;
+    left:38%;
+
+}
+.createCerealContainer label{
+    margin:12px;
+}

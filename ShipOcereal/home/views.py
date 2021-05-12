@@ -26,7 +26,7 @@ def create_images(cerealImage, Cereal):
 
 def create_cereal(request):
     if request.method == 'POST':
-        form = CerealCreateForm(data=request.POST)
+        form = CerealCreateForm(request.POST)
         if form.is_valid():
             cereal = form.save()
             cereal.initialize()
