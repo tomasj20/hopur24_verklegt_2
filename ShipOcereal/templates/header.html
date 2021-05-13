@@ -21,16 +21,13 @@
         {% if user.is_authenticated %}
             <img src="{{ user.user_info.profile_image }}" class="profile-image" />
         {% endif %}
-        <button class="CartButton" onclick="navToCart()">
-            Karfa
-            <img src="{% static 'images/cart.png' %}" alt="cartIcon" class="cartIMG">
-        </button>
         {% if user.is_authenticated %}
-            <li><a href="{% url 'profileinfo' %}">Aðgangur</a></li>
-            <li><a href="{% url 'logout' %}">Útskráning</a></li>
+            <li><a href="{% url 'profileinfo' %}" class="profile-options">Aðgangur</a></li>
+            <li><a href="{% url 'logout' %}" class="profile-options">Útskráning</a></li>
+            <li><a href="{% url 'cart' %}" class="profile-options">Karfa</a></li>
         {% else %}
-            <li><a href="{% url 'login' %}">Skrá inn</a></li>
-            <li><a href="{% url 'register' %}">Nýskráning</a></li>
+            <li><a href="{% url 'login' %}" class="profile-options">Skrá inn</a></li>
+            <li><a href="{% url 'register' %}" class="profile-options">Nýskráning</a></li>
         {% endif %}
 
     </div>

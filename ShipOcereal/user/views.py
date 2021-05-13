@@ -27,13 +27,12 @@ def profile(request):
             userData = form.save(commit=False)
             userData.user = request.user
             userData.save()
-            return redirect('profile')
+            return redirect('profileinfo')
     return render(request, 'user/profile.html', {
         'form': ProfileForm(instance=userData)
     })
 
 def profile_info(request):
-    user = request.user
-    return render(request, 'user/profile_info.html', {
-        'user': user
-    })
+    return render(request, "user/profile_info.html",
+                  context={"profile_info": user_info.objects.filter(user=request.user.id).first()})
+

@@ -444,11 +444,11 @@ form .input-box span.details{
     margin:0;
     margin-bottom:12px;
 }
-.singleCerealContainer button{
-    display:inline-block;
-    float:left;
-    margin:5px;
-
+.singleCerealContainer button {
+    display: inline-block;
+    float: left;
+    margin: 5px;
+}
 .editProfileContainer {
     display: block;
     position: relative;
@@ -467,4 +467,15 @@ form .input-box span.details{
     position: absolute;
     top: 1000px;
 }
+.profile-options {
+    background:transparent;
+    display:inline-block;
+    position:relative;
+    font-size:23px;
+    top:-50px;
+    left:88%;
+    border:0px;
+    cursor: pointer;
+}
+
 
