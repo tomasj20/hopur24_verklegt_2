@@ -61,3 +61,10 @@ Dagbók Miðvikudagur 05.04.2021
   ->Admin actions forsíða --Tommi//Komið
   ->Breyta upplýsingum um vöru --Tommi//Komið
 -Reyna tengja databasein við forritið --Tommi
+
+
+Dagbók Fimmtudagur 13.05.2021
+-Gera cart functional
+-Gera aðgangs view
+-Redda myndinni í header
+-Gera sér síðu fyrir admin
