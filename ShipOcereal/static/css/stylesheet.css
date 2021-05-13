@@ -67,20 +67,28 @@
     left:0%;
     cursor: pointer;
 }
-
+.input-group{
+    display: inline;
+    left: 500px;
+}
 .searchBar{
     display:inherit;
-    position:relative;
+    position:absolute;
     margin:auto;
     width:500px;
     height:30px;
     top:10px;
     font-size:24px;
 }
-.searchButton{
+.input-group-btn{
     display:inline-block;
-    position:fixed;
-    top:100%;
+    position:relative;
+    top:7px;
+    height:20px;
+    font-size: 20px;
+}
+#search-btn {
+    top: 6px;
 }
 
 .categories-header {

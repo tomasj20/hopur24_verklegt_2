@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from home.models import Cereal, cerealImage
 from home.forms.cereal_form import CerealCreateForm, CerealUpdateForm
@@ -9,6 +10,15 @@ TEMPLATE_DIRS = (
     'os.path.join(BASE_DIR, "templates"),'
 )
 def index(request):
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        cereals = [{
+            'id': x.id,
+            'name': x.name,
+            'description': x.description,
+            'image': x.image.path
+        } for x in Cereal.objects.filter(name__icontains=search_filter)]
+        return JsonResponse({'data': cereals})
     context = {'Cereals': Cereal.objects.all().order_by('name')}
     return render(request, "home/test.html", context)
 

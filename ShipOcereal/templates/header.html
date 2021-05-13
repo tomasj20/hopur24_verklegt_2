@@ -12,7 +12,12 @@
 <body>
     <div class="header">
         <button class="headerText" onclick="navToFrontPage()">Ship O' Cereal</button>
-        <input type="text" placeholder="Leita.." class="searchBar">
+        <div class="input-group">
+            <input type="text" placeholder="Leita.." class="searchBar" id="search-bar">
+            <div class="input-group-btn">
+                <button type="button" id="search-btn">Leita</button>
+            </div>
+        </div>
         <button class="UserButton" onclick="navToLoginPage()">
             Aðgangur
              <img src="{% static 'images/user.png' %}" alt="userIcon" class="userIMG">
@@ -45,5 +50,7 @@
     {% endblock %}
 
 <script src="{% static 'js/header.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous"></script>
+<script src="{% static 'js/cereals.js' %}"></script>
 </body>
 </html>
