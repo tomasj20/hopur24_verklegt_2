@@ -84,36 +84,94 @@
 }
 
 .categories-header {
-    display: block;
+    display:block;
     position: absolute;
-    width: 100%;
-    height: 130px;
-    top: 100px;
-    padding: 0;
-    margin: 0;
-    left: 0;
+    width:100%;
+    height:105px;
+    top:125px;
+    padding:0;
+    margin:0;
+    left:0;
     right: 0;
     white-space: nowrap;
     background-color: #e9e9e9;
-    border:solid black;
+
 }
 .category {
     display: inline-block;
     border: 0;
     width: 32.5%;
-    text-align: center;
+    text-align: left;
     right: 0;
     padding: 0;
     margin: 0;
-    height: 100px;
-    font-size:25px;
-    font-family:Arial;
-    color:#6DDDDD;
-    cursor: pointer;
-    background-color: #e9e9e9;
+    height: 105px;
+    color: white;
+    letter-spacing: 2px;
 }
+.category h2{
+  text-align:center;
+  position: relative;
+  z-index: 100;
+  color: white;
+}
+.category h2:hover{
+  transition-delay: 1.5s;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0 10px #6DDDDD,
+              0 0 20px #6DDDDD,
+              0 0 40px #6DDDDD,
+              0 0 80px #6DDDDD,
+              0 0 160px #6DDDDD;
+}
+
 .category:hover {
-    background-color: lightblue;
+    color: #6DDDDD;
+    cursor: pointer;
+}
+
+.category::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 5px;
+    background: #6DDDDD;
+    box-shadow: 5px -8px 0 #6DDDDD,
+                5px 8px 0 #6DDDDD;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+.category:hover::before{
+  width: 32%;
+  height: 105px;
+  box-shadow: 5px 0 0 #6DDDDD,
+              5px 0 0 #6DDDDD;
+  transition-delay: 0s,0.5s,1s,1s;
+}
+
+.category::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 5px;
+    background: #6DDDDD;
+    box-shadow: 5px -8px 0 #6DDDDD,
+                5px 8px 0 #6DDDDD;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+.category:hover::after{
+  width: 18%;
+  height: 105px;
+  color: black;
+  box-shadow: 5px 0 0 #6DDDDD,
+              5px 0 0 #6DDDDD;
+  transition-delay: 0s,0.5s,1s,1s;
 }
 
 #healthy {
@@ -339,7 +397,7 @@ form .input-box span.details{
 
 .sjáNánar {
     display:inline-block;
-    background-color: #e9e9e9;
+    background: #AEAEAE;
     border: 0;
     font-weight: bolder;
     font-family: Arial;
@@ -351,7 +409,7 @@ form .input-box span.details{
 }
 .addToCart{
     display: inline-block;
-    background-color:#e9e9e9;
+    background:#AEAEAE;
     border:0;
     font-weight: bolder;
     font-family:Arial;
@@ -382,17 +440,4 @@ form .input-box span.details{
     display:inline-block;
     float:left;
     margin:5px;
-}
-
-.createCerealContainer{
-    background-color:#E9E9E9;
-    padding:50px;
-    display:block;
-    position: absolute;
-    top:50%;
-    left:38%;
-
-}
-.createCerealContainer label{
-    margin:12px;
 }
