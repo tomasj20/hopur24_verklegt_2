@@ -5,9 +5,14 @@ from user.models import user_info
 class cerealCategory(models.Model):
     name = models.CharField(max_length=255)
 
+    def __str__(self):
+        return self.name
 class cerealImage(models.Model):
     image = models.CharField(max_length=9999)
     path = models.CharField(max_length=1024)
+
+    def __str__(self):
+        return self.image
 
 class Cereal(models.Model):
     name = models.CharField(max_length=255)

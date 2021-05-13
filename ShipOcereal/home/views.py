@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from home.models import Cereal, cerealImage
-from home.forms.cereal_form import CerealCreateForm
+from home.forms.cereal_form import CerealCreateForm, CerealUpdateForm
 import datetime
 from django.http import HttpResponse
 # Create your views here.
@@ -24,16 +24,17 @@ def create_images(cerealImage, Cereal):
             image.save()
             Cereal.image.add(image)
 
+def loadImage(path):
+    if path != '':
+        image = cerealImage(image='Placeholder', path=path)
+        return image
+
 def create_cereal(request):
     if request.method == 'POST':
         form = CerealCreateForm(data=request.POST)
         if form.is_valid():
             cereal = form.save()
-            cereal.initialize()
-            cerealImage = dict(request.POST)['image']
-            create_images(cerealImage, Cereal)
-            cereal.save()
-            return redirect('index')
+            return redirect('http://127.0.0.1:8000/')
     else:
         form = CerealCreateForm()
         #TODO: CREATE NEW INSTANCE CerealCreateForm()
@@ -43,5 +44,20 @@ def create_cereal(request):
 
 def delete_cereal(request, id):
     cereal = get_object_or_404(Cereal, pk=id)
-    Cereal.delete()
-    return redirect('index')
+    cereal.delete()
+    return redirect('http://127.0.0.1:8000/')
+
+def update_cereal(request, id):
+    instance = get_object_or_404(Cereal, pk=id)
+    if request.method == 'POST':
+        form = CerealUpdateForm(data=request.POST, instance=instance)
+        if form.is_valid():
+            form.save()
+            return redirect('cereal-details', id=id)
+
+    else:
+        form = CerealUpdateForm(instance=instance)
+    return render(request, 'home/update_cereal.html', {
+        'form': form,
+        'id': id
+    })

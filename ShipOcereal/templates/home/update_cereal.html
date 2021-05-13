@@ -1,0 +1,10 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <form class="createCerealContainer form-horizontal" action="{% url 'update_cereal' id %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Update" class="btn-primary-pull-right" style="clear: both; margin: 10px 0"/>
+    </form>
+{% endblock %}
