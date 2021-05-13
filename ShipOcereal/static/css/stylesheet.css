@@ -87,7 +87,7 @@
     display: block;
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 130px;
     top: 100px;
     padding: 0;
     margin: 0;
@@ -110,6 +110,7 @@
     font-family:Arial;
     color:#6DDDDD;
     cursor: pointer;
+    background-color: #e9e9e9;
 }
 .category:hover {
     background-color: lightblue;
@@ -338,7 +339,7 @@ form .input-box span.details{
 
 .sjáNánar {
     display:inline-block;
-    background: #AEAEAE;
+    background-color: #e9e9e9;
     border: 0;
     font-weight: bolder;
     font-family: Arial;
@@ -350,7 +351,7 @@ form .input-box span.details{
 }
 .addToCart{
     display: inline-block;
-    background:#AEAEAE;
+    background-color:#e9e9e9;
     border:0;
     font-weight: bolder;
     font-family:Arial;

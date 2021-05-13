@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from home.models import Cereal, cerealImage
-from home.forms.cereal_form import CerealCreateForm
+from home.forms.cereal_form import CerealCreateForm, CerealUpdateForm
 import datetime
 from django.http import HttpResponse
 # Create your views here.
@@ -50,9 +50,12 @@ def delete_cereal(request, id):
 def update_cereal(request, id):
     instance = get_object_or_404(Cereal, pk=id)
     if request.method == 'POST':
-        print(1)
+        form = CerealUpdateForm(data=request.POST, instance=instance)
+        if form.is_valid():
+            form.save()
+            return redirect('cereal-details', id=id)
+
     else:
-        print(2)
         form = CerealUpdateForm(instance=instance)
     return render(request, 'home/update_cereal.html', {
         'form': form,
