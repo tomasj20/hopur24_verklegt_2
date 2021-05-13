@@ -116,7 +116,7 @@
   color: white;
 }
 .category h2:hover{
-  transition-delay: 1.5s;
+  transition-delay: 1s;
   color: black;
   cursor: pointer;
   box-shadow: 0 0 10px #6DDDDD,
