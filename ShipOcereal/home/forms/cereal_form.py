@@ -17,6 +17,7 @@ class CerealCreateForm(ModelForm):
             'price': widgets.NumberInput(attrs={'class': 'form-control', 'placeholder': 'price'}),
             'discount': widgets.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Product discount'}),
             'status': widgets.CheckboxInput(attrs={'class': 'checkbox'}),
+            'image': widgets.Select(attrs={'class': 'form-control', 'placeholder': 'category'})
         }
 
 class CerealUpdateForm(ModelForm):
