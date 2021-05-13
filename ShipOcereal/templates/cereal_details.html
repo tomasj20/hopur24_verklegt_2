@@ -4,7 +4,7 @@
     <img class="cereal-img" src="{{ cereal.image.path }}"/>
     <h2>{{ cereal.name }}</h2>
     <p>{{ cereal.description }}</p>
-    <h4> {{ cereal.price }} </h4>
+    <h4> {{ cereal.price }}kr </h4>
     <a href="{% url 'delete_cereal' cereal.id %}" class="block btn btn-primary">Delete product</a>
     <a href="{% url 'update_cereal' cereal.id %}" class="block btn btn-primary">Update product</a>
 {% endblock %}

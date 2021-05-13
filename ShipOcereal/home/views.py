@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from home.models import Cereal, cerealImage
 from home.forms.cereal_form import CerealCreateForm, CerealUpdateForm
 from home.forms.image_form import imageForm
+from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponse
 # Create your views here.
@@ -23,11 +24,12 @@ def index(request):
     context = {'Cereals': Cereal.objects.all().order_by('name')}
     return render(request, "home/test.html", context)
 
+@login_required
 def get_cereal_by_id(request, id):
     return render(request, 'cereal_details.html', {
         'cereal': get_object_or_404(Cereal, pk=id)
     })
-
+@login_required
 def create_images(cerealImage, Cereal):
     for img in cerealImage:
         if img != '':
@@ -35,11 +37,8 @@ def create_images(cerealImage, Cereal):
             image.save()
             Cereal.image.add(image)
 
-def loadImage(path):
-    if path != '':
-        image = cerealImage(image='Placeholder', path=path)
-        return image
 
+@login_required
 def create_cereal(request):
     if request.method == 'POST':
         form = CerealCreateForm(data=request.POST)
@@ -51,7 +50,7 @@ def create_cereal(request):
     return render(request, 'home/create_cereal.html', {
         'form': form
     })
-
+@login_required
 def create_cereal_start(request):
     if request.method == 'POST':
         form = imageForm(data=request.POST)
@@ -62,11 +61,12 @@ def create_cereal_start(request):
         form = imageForm()
     return render(request, 'home/createCerealImage.html',{'form':form})
 
+@login_required
 def delete_cereal(request, id):
     cereal = get_object_or_404(Cereal, pk=id)
     cereal.delete()
     return redirect('http://127.0.0.1:8000/')
-
+@login_required
 def update_cereal(request, id):
     instance = get_object_or_404(Cereal, pk=id)
     if request.method == 'POST':

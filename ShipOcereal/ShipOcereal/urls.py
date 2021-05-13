@@ -21,12 +21,11 @@ from home.models import Cereal
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
-    path('login/',include('login.urls')),
-    path('register/',include('register.urls')),
     path('filter/',include('filter.urls')),
     path('cart/',include('cart.urls')),
     path('<int:id>',include('home.urls')),
     path('create_cereal/', include('home.urls')),
     path('create_cereal2/',include('home.urls')),
-    path('update_cereal', include('home.urls'))
+    path('update_cereal', include('home.urls')),
+    path('user/', include('user.urls'))
 ]

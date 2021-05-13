@@ -14,8 +14,10 @@ class user_info(models.Model):
     address = models.CharField(max_length=255)
     zip_code = models.CharField(max_length=20)
     town = models.CharField(max_length=100)
+    profile_image = models.CharField(max_length=9999)
     country = models.ForeignKey(country, on_delete=models.DO_NOTHING, blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True, null=True)
+
 
 class SearchHistory(models.Model):
     search = models.CharField(max_length=999)
