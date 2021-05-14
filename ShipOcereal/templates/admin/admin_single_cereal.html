@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+<div class="singleCerealContainer">
+    <div class="singleCerealImageAndName">
+        <img class="cereal-img" src="{{ cereal.image.path }}"/>
+        <h2>{{ cereal.name }}</h2>
+    </div>
+    <a href="{{ cereal.id }}" class="block btn btn-primary">Sjá nánar</a>
+    <a href="{% url 'update_cereal' cereal.id %}" class="block btn btn-primary">Uppfæra Vöru</a>
+    <h4>{{ cereal.price }} Kr</h4>
+</div>

@@ -1,0 +1,18 @@
+{% extends "header.html" %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <div class="col-all">
+        <a href="{% url 'customerView' %}" class="profile-menu-options">Skoða síðu sem viðskiptavinur</a>
+        <a href="{% url 'create_cereal_start' %}" class="profile-menu-options">Bæta við vöru</a>
+        <a href="{% url 'staff-index' %}" class="profile-menu-options">Tilbaka</a>
+    </div>
+    <div class="col">
+        <h3 class="font-weight-bold mb-4">Vörulisti:</h3>
+            {% for cereal in cereals %}
+                <a href="{{cereal.id}}">
+                    <h4>{{ cereal.name }}, {{ cereal.manufacturer }}, {{ cereal.quantity }}, {{ cereal.description }}, {{ cereal.category }}, {{ cereal.price }}, {{ cereal.status }}, {{ cereal.discount }} </h4>
+                </a>
+            {% endfor %}
+    </div>
+{% endblock %}

@@ -6,37 +6,15 @@
     <title>Forsíða</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
-
-    <script type="text/javascript">
-        var User = '{{ request.user }}'
-        function getToken(name) {
-            let cookieValue = null;
-            if (document.cookie && document.cookie !== '') {
-                const cookies = document.cookie.split(';');
-                for (let i = 0; i < cookies.length; i++) {
-                    const cookie = cookies[i].trim();
-                    // Does this cookie string begin with the name we want?
-                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                        break;
-                    }
-                }
-            }
-            return cookieValue;
-        }
-        const csrftoken = getToken('csrftoken');
-    </script>
-
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
     <div class="header">
+        <a href="{% url 'staff-index' %}" class="headerText">Ship O'Cereal</a>
         {% if request.user.is_superuser %}
-            <a href="{% url 'staff-index' %}" class="headerText">Ship O'Cereal</a>
             <li><a href="{% url 'logout' %}" class="profile-options">Útskráning</a></li>
         {% elif user.is_authenticated %}
-            <li><a href="{% url 'index' %}" class="headerText">Ship O'cereal</a></li>
             <li><a href="{% url 'profilemenu' %}" class="profile-options">Aðgangur</a></li>
             <li><a href="{% url 'logout' %}" class="profile-options">Útskráning</a></li>
             <li><a href="{% url 'cart' %}" class="profile-options">Karfa</a></li>
@@ -51,9 +29,12 @@
                     <h2>Vegan</h2>
                 </button>
             </div>
+            <div class="footer">
+                <p>This is footer</p>
+                <p>Made by gvendur, gústaf and geir ehf</p>
+            </div>
 
         {% else %}
-            <li><a href="{% url 'index' %}" class="headerText">Ship O'cereal</a></li>
             <li><a href="{% url 'login' %}" class="profile-options">Skrá inn</a></li>
             <li><a href="{% url 'register' %}" class="profile-options">Nýskráning</a></li>
             <div class="categories-header">
@@ -66,6 +47,10 @@
                 <button class="category" id="vegan" onclick="navToVeganFilter()">
                     <h2>Vegan</h2>
                 </button>
+            </div>
+            <div class="footer">
+                <p>This is footer</p>
+                <p>Made by gvendur, gústaf and geir ehf</p>
             </div>
         {% endif %}
 
@@ -80,10 +65,9 @@
 
 
 
+
 <script src="{% static 'js/header.js' %}"></script>
-<script src="{% static 'js/cart.js' %}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous"></script>
 <script src="{% static 'js/cereals.js' %}"></script>
 </body>
-
 </html>

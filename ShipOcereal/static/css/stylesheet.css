@@ -303,11 +303,11 @@ input[type="submit"]:hover{
 }
 
 .footer{
-    position:absolute;
-    display:block;
+    position: absolute;
     width:100%;
     border-top:solid black;
-    top:300%;
+    margin-top: auto;
+    bottom: 0;
 }
 
 .container{
@@ -611,5 +611,51 @@ form .input-box span.details{
     border-bottom:solid black;
     margin:20px;
     float:right;
+}
+.cerealDetailsContainer{
+    position: absolute;
+    display: inline-block;
+    top: 240px;
+    left: 40%;
+}
+.adminMenuContainer{
+    position: absolute;
+    display: inline-block;
+    top: 240px;
+}
+.adminMenuContainer{
+  position: absolute;
+  text-align: center;
+  height: 50%;
+  top: 250px;
+  left: 40%;
+  transform: translate(-25%, -50%);
+  width: 300px;
+  background: #e9e9e9;
+  border: solid black;
+}
+
+.adminActions h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid black;
 
 }
+.admin-menu-options{
+    position: relative;
+    z-index: 100;
+    padding: 10px 0px 20px 10px;
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.admin-menu-options:hover{
+    color: #6DDDDD;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+

@@ -1,3 +1,4 @@
+console.log('Hello')
 $(document).ready(function() {
     $('#search-btn').on('click', function(e) {
         e.preventDefault()

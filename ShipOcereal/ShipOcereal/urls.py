@@ -20,6 +20,7 @@ from home.models import Cereal
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('staff/', include('staff.urls')),
     path('',include('home.urls')),
     path('filter/',include('filter.urls')),
     path('cart/',include('cart.urls')),
