@@ -3,7 +3,7 @@
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
     <div class="col-all">
-        <a href="{% url 'profilemenu' %}" class="profile-menu-options">Mín Síða</a><
+        <a href="{% url 'profilemenu' %}" class="profile-menu-options">Mín Síða</a>
         <a href="{% url 'profileinfo' %}" class="profile-menu-options">Notenda upplýsingar</a>
         <a href="{% url 'search_history' %}" class="profile-menu-options">Leitarsaga</a>
     </div>
@@ -12,6 +12,6 @@
         {% if user.profile_image %}
             <img class="Profile-Image-Menu" src="{{ user.profile_image }}" alt="Profile-Image-Menu">
         {% endif %}
-        <h4 class="username-profile">{{ user.username }}</h4>
+        <h4 class="username-profile">Notendanafn: {{ user.user.username }}</h4>
     </div>
 {% endblock %}

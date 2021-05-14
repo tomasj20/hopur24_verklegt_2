@@ -21,7 +21,7 @@ def registerPage(request):
     context = {'form': UserCreationForm}
     return render(request, "user/register/placeholder.html", context)
 
-@login_required
+
 def profile(request):
     userData = user_info.objects.filter(user=request.user).first()
     if request.method == 'POST':
@@ -35,16 +35,16 @@ def profile(request):
         'form': ProfileForm(instance=userData)
     })
 
-@login_required
+
 def profile_menu(request):
     return render(request, "user/profile_menu.html", context={"user": user_info.objects.filter(user=request.user.id).first()})
 
-@login_required
+
 def profile_info(request):
     return render(request, "user/profile_info.html",
                   context={"user": user_info.objects.filter(user=request.user.id).first()})
 
-@login_required
+
 def search_history(request):
     s = SearchHistory.objects.filter(user=request.user.id)
     return render(request, "user/search_history.html", {

@@ -4,6 +4,7 @@ from home.models import Cereal, cerealImage
 from home.forms.cereal_form import CerealCreateForm, CerealUpdateForm
 from home.forms.image_form import imageForm
 from django.contrib.auth.decorators import login_required
+from user.models import SearchHistory
 import datetime
 from django.http import HttpResponse
 # Create your views here.
@@ -20,6 +21,9 @@ def index(request):
             'description': x.description,
             'image': x.image.path
         } for x in Cereal.objects.filter(name__icontains=search_filter)]
+        if request.user.is_authenticated:
+            s = SearchHistory(user=request.user, search= search_filter)
+            s.save()
         return JsonResponse({'data': cereals})
     context = {'Cereals': Cereal.objects.all().order_by('name')}
     return render(request, "home/test.html", context)

@@ -492,6 +492,7 @@ form .input-box span.details{
     position: absolute;
     display: block;
     top: 250px;
+    left: 300px;
 }
 .Profile-Image-Menu{
     width: 120px;

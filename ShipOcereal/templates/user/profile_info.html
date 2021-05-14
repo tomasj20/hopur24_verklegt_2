@@ -2,11 +2,17 @@
 {% load static %}
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <div class="col-all">
+        <a href="{% url 'profilemenu' %}" class="profile-menu-options">Mín Síða</a>
+        <a href="{% url 'profileinfo' %}" class="profile-menu-options">Notenda upplýsingar</a>
+        <a href="{% url 'search_history' %}" class="profile-menu-options">Leitarsaga</a>
+    </div>
     <div class="container form-horizontal">
         <h1>Full Name: {{ user.full_name  }}</h1>
         <h1>Address: {{ user.address  }}</h1>
         <h1>Zip Code: {{ user.zip_code  }}</h1>
         <h1>Town: {{ user.town  }}</h1>
+        <h1>Country: {{ user.country.country_name }}</h1>
         <button type="button" ><a href="{% url 'profile' %}">Breyta upplýsingum</a></button>
     </div>
 {% endblock %}
