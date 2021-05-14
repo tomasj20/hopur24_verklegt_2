@@ -8,11 +8,11 @@
         <a href="{% url 'search_history' %}" class="profile-menu-options">Leitarsaga</a>
     </div>
     <div class="container form-horizontal">
-        <h1>Full Name: {{ user.full_name  }}</h1>
-        <h1>Address: {{ user.address  }}</h1>
-        <h1>Zip Code: {{ user.zip_code  }}</h1>
-        <h1>Town: {{ user.town  }}</h1>
-        <h1>Country: {{ user.country.country_name }}</h1>
+        <h1>Nafn: {{ user.full_name  }}</h1>
+        <h1>Heimilisfang: {{ user.address  }}</h1>
+        <h1>Póstnúmer: {{ user.zip_code  }}</h1>
+        <h1>Bæjarfélag: {{ user.town  }}</h1>
+        <h1>Land: {{ user.country.country_name }}</h1>
         <button type="button" ><a href="{% url 'profile' %}">Breyta upplýsingum</a></button>
     </div>
 {% endblock %}
