@@ -1,5 +1,6 @@
 from django.db import models
 from user.models import user_info
+from django.contrib.auth.models import User
 # Create your models here.
 
 class cerealCategory(models.Model):
@@ -42,6 +43,7 @@ class Cart(models.Model):
     currentID = models.CharField(max_length=999, blank=True, null=True)
     userInfo = models.ForeignKey(user_info, on_delete=models.DO_NOTHING, blank=True, null=True)
     shipping = models.CharField(max_length=50)
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True, null=True)
 
 class CartProduct(models.Model):
     product_id = models.IntegerField(default=1)

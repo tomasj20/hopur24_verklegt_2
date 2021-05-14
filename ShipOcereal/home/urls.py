@@ -8,4 +8,5 @@ urlpatterns = [
     path('create_cereal2',views.create_cereal, name="create_cereal"),
     path('delete_cereal/<int:id>', views.delete_cereal, name='delete_cereal'),
     path('update_cereal', views.update_cereal, name="update_cereal"),
+    path('update_item', views.updateItem, name="updateItem"),
 ]
