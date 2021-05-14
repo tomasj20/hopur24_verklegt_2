@@ -595,3 +595,21 @@ form .input-box span.details{
               5px 5px 5px 10px #6DDDDD;
   transition-delay: 0s,0.5s,1s,1s;
 }
+
+.cartContainer{
+    display:block;
+    position:absolute;
+    top:250px;
+    left:24%;
+    float:right;
+    text-align: center;
+    max-width: 650px;
+}
+
+.cartItemContainer{
+    display:block;
+    border-bottom:solid black;
+    margin:20px;
+    float:right;
+
+}
