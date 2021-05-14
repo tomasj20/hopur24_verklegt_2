@@ -704,7 +704,11 @@ form .input-box span.details{
   transition: 0.5s;
   transform: scale(1) rotateX(2deg) rotateY(10deg);
 }
-
+.updateContainer{
+    position: absolute;
+    display: flex;
+    top: 250px;
+}
 .colaboutus {
   padding: 0px 35px 15px 0px;
 }

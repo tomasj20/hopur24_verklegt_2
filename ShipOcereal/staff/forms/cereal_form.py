@@ -31,5 +31,5 @@ class CerealUpdateForm(ModelForm):
             'description': widgets.TextInput(attrs={'class': 'form-control', 'placeholder': 'Some description'}),
             'category': widgets.Select(attrs={'class': 'form-control', 'placeholder': 'category'}),
             'price': widgets.NumberInput(attrs={'class': 'form-control', 'placeholder': 'price'}),
-            'discount': widgets.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Product discount'}),
+            'discount': widgets.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Product discount'})
         }
