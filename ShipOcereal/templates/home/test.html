@@ -2,6 +2,12 @@
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <div class="input-group">
+        <input type="text" placeholder="Leita.." class="searchBar" id="search-bar">
+        <div class="input-group-btn">
+            <button type="button" id="search-btn">Leita</button>
+        </div>
+    </div>
     <div class="Cereals">
         {% for cereal in Cereals %}
             {% include 'home/single_cereal.html' with cereal=cereal %}

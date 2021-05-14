@@ -34,6 +34,11 @@ def profile(request):
     return render(request, 'user/profile.html', {
         'form': ProfileForm(instance=userData)
     })
+
+@login_required
+def profile_menu(request):
+    return render(request, "user/profile_menu.html", context={"user": user_info.objects.filter(user=request.user.id).first()})
+
 @login_required
 def profile_info(request):
     return render(request, "user/profile_info.html",

@@ -68,27 +68,30 @@
     cursor: pointer;
 }
 .input-group{
-    display: inline;
-    left: 500px;
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    width: 500px;
+    top: 50px;
+    height: 30px;
+    font-size: 24px;
 }
 .searchBar{
-    display:inherit;
+    display:inline-block;
     position:absolute;
     margin:auto;
     width:500px;
-    height:30px;
-    top:10px;
-    font-size:24px;
+    left: 500px;
 }
 .input-group-btn{
     display:inline-block;
     position:relative;
-    right: 0%;
-    top:7px;
-    height:20px;
-    font-size: 20px;
+    left: 500px;
+    width: 15px;
+    cursor: pointer;
 }
 #search-btn {
+    display: inline-block;
     top: 6px;
 }
 
@@ -486,4 +489,17 @@ form .input-box span.details{
     width: 30px;
     height: 40px;
 }
-
+.col {
+    position: absolute;
+    display: block;
+    top: 500px;
+}
+.Profile-Image-Menu{
+    width: 40px;
+    height: 50px;
+}
+.col-all {
+    position: absolute;
+    display: block;
+    top: 250px;
+}

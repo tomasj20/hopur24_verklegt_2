@@ -7,7 +7,6 @@
         <h1>Address: {{ user.address  }}</h1>
         <h1>Zip Code: {{ user.zip_code  }}</h1>
         <h1>Town: {{ user.town  }}</h1>
-        <img src="{{ user.profile_image }}" id="profile-image-account"/>
         <button type="button" ><a href="{% url 'profile' %}">Breyta upplýsingum</a></button>
     </div>
 {% endblock %}

@@ -12,17 +12,8 @@
 <body>
     <div class="header">
         <button class="headerText" onclick="navToFrontPage()">Ship O' Cereal</button>
-        <div class="input-group">
-            <input type="text" placeholder="Leita.." class="searchBar" id="search-bar">
-            <div class="input-group-btn">
-                <button type="button" id="search-btn">Leita</button>
-            </div>
-        </div>
         {% if user.is_authenticated %}
-            <img src="{{ user.user_info.profile_image }}" class="profile-image" />
-        {% endif %}
-        {% if user.is_authenticated %}
-            <li><a href="{% url 'profileinfo' %}" class="profile-options">Aðgangur</a></li>
+            <li><a href="{% url 'profilemenu' %}" class="profile-options">Aðgangur</a></li>
             <li><a href="{% url 'logout' %}" class="profile-options">Útskráning</a></li>
             <li><a href="{% url 'cart' %}" class="profile-options">Karfa</a></li>
         {% else %}
