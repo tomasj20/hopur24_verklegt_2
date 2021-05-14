@@ -12,7 +12,7 @@ $(document).ready(function() {
                                 <a href="/${d.id}">
                                     <img class="cereal-img" src="${d.image}"/>
                                     <h4>${d.name}</h4>
-                                    <p>${d.description}</p>
+                                    <p>${d.description}</p>   
                                 </a>
                             </div>`
                 });

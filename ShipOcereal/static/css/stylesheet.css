@@ -306,8 +306,7 @@ input[type="submit"]:hover{
     position: absolute;
     width:100%;
     border-top:solid black;
-    margin-top: auto;
-    bottom: 0;
+    top: 2350px;
 }
 
 .container{
@@ -413,6 +412,7 @@ form .input-box span.details{
     width:100%;
     height:100%;
     margin-top:250px;
+    left: -100px;
 
 }
 
@@ -618,19 +618,15 @@ form .input-box span.details{
     top: 240px;
     left: 40%;
 }
-.adminMenuContainer{
-    position: absolute;
-    display: inline-block;
-    top: 240px;
-}
+
 .adminMenuContainer{
   position: absolute;
   text-align: center;
-  height: 50%;
-  top: 250px;
-  left: 40%;
+  height: 75%;
+  top: 520px;
+  left: 39%;
   transform: translate(-25%, -50%);
-  width: 300px;
+  width: 700px;
   background: #e9e9e9;
   border: solid black;
 }
@@ -657,5 +653,73 @@ form .input-box span.details{
     cursor: pointer;
     text-decoration: underline;
     transition: 0.2s;
+}
+.admin-header{
+    position: absolute;
+    width:100%;
+    height:120px;
+    top:100px;
+    padding:0;
+    margin:0;
+    left:0;
+    right: 0;
+    white-space: nowrap;
+    background-color: #e9e9e9;
+    text-align: center;
+}
+.ABbody {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://images-na.ssl-images-amazon.com/images/I/61uxy8lAaAL._AC_SL1468_.jpg");
+  background-size: cover;
+  perspective: 1000px;
+}
+.modal {
+  min-width: 30vw;
+  min-height: 25vh;
+  padding: 10px 30px 30px 40px;
+  border: 5px rgb(121, 0, 0) solid;
+  background: rgba(169, 0, 0, 0.4);
+  border-radius: 2px;
+  box-shadow:
+    inset 1px 1px 5px rgba(0, 0, 0, 0.9),
+    inset 1px -1px 5px rgba(0, 0, 0, 0.3),
+    1px -1px 5px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: row;
+    font-family: 'Press Start 2P';
+  font-size: 24px;
+  color: rgb(111, 0, 0);
+  line-height: 1.6;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
+
+  transition: 0.5s;
+  transform: scale(1) rotateX(2deg) rotateY(10deg);
+}
+
+.colaboutus {
+  padding: 0px 35px 15px 0px;
+}
+#checkbox1-label {
+  position: absolute;
+  bottom: 10vh;
+  right: 7vw;
+  width: 100px;
+  height: 300px;
+  color: #6DDDDD;
+}
+#checkbox1:checked ~ .modal {
+  transform:scale(1) rotateX(2deg) rotateY(10deg);
+}
+.exitbtn{
+    position: absolute;
+    top: 35px;
+    left: 35px;
 }
 

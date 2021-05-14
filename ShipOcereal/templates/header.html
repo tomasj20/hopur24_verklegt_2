@@ -6,6 +6,7 @@
     <title>Forsíða</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
 
     <script type="text/javascript">
         var User = '{{ request.user }}'
@@ -35,8 +36,14 @@
         {% if request.user.is_superuser %}
             <a href="{% url 'staff-index' %}" class="headerText">Ship O'Cereal</a>
             <li><a href="{% url 'logout' %}" class="profile-options">Útskráning</a></li>
+            <div class="admin-header">
+                <h1>Admin Account</h1>
+            </div>
+
         {% elif user.is_authenticated %}
-            <li><a href="{% url 'index' %}" class="headerText">Ship O'cereal</a></li>
+            <button class="headerText" onclick="navToFrontPage()">
+                <h1>Ship O'Cereal</h1>
+            </button>
             <li><a href="{% url 'profilemenu' %}" class="profile-options">Aðgangur</a></li>
             <li><a href="{% url 'logout' %}" class="profile-options">Útskráning</a></li>
             <li><a href="{% url 'cart' %}" class="profile-options">Karfa</a></li>
@@ -53,7 +60,9 @@
             </div>
 
         {% else %}
-            <li><a href="{% url 'index' %}" class="headerText">Ship O'cereal</a></li>
+            <button class="headerText" onclick="navToFrontPage()">
+                <h1>Ship O'Cereal</h1>
+            </button>
             <li><a href="{% url 'login' %}" class="profile-options">Skrá inn</a></li>
             <li><a href="{% url 'register' %}" class="profile-options">Nýskráning</a></li>
             <div class="categories-header">
@@ -70,8 +79,6 @@
         {% endif %}
 
     </div>
-
-
 
 
     {% block content %}

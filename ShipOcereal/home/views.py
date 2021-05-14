@@ -63,4 +63,7 @@ def updateItem(request):
 
     return JsonResponse('Item was added', safe=False)
 
+def about_us(request):
+    return render(request, "home/aboutus.html")
+
 

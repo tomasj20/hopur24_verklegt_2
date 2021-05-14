@@ -1,0 +1,30 @@
+
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+
+</head>
+    <div class="ABbody">
+        <a href="{% url 'index'  %}" class="exitbtn">Til baka</a>
+        <input type="checkbox" id="checkbox1" hidden="">
+        <label id="checkbox1-label" for="checkbox1"></label>
+        <div class="modal">
+            <div class="colaboutus">
+            <h3>About Us:</h3>
+            Tómas President<br>
+            Daníel Vice. Pres<br>
+            Halldór CEO<br>
+            Address  -HR-
+            </div>
+            <div class="colaboutus">
+                <h3>Founded in:</h3>
+                5/12/21
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
