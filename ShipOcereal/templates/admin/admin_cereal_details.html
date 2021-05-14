@@ -6,7 +6,7 @@
         <h2>{{ cereal.name }}</h2>
         <p>{{ cereal.description }}</p>
         <h4> {{ cereal.price }}kr </h4>
-        <a href="{% url 'delete_cereal' cereal.id %}" class="block btn btn-primary">Delete product</a>
-        <a href="{% url 'update_cereal' cereal.id %}" class="block btn btn-primary">Update product</a>
+        <a href="{% url 'delete_cereal' cereal.id %}" class="block btn btn-primary">Eyða vöru</a>
+        <a href="{% url 'update_cereal' cereal.id %}" class="block btn btn-primary">Uppfæra vöru</a>
     </div>
 {% endblock %}

@@ -306,7 +306,10 @@ input[type="submit"]:hover{
     position: absolute;
     width:100%;
     border-top:solid black;
-    top: 2350px;
+    top: 2050px;
+    height: 100px;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .container{
