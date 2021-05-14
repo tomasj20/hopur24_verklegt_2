@@ -1,0 +1,23 @@
+{% extends "header.html" %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <div class="row my-1 my-md-4">
+        <div class="col-md-auto">
+            <a href="{% url 'profileinfo' %}" class="btn d-block yellow-background m-2">
+                <h6 class="font-weight-bold my-2"><span class="fas fa-user-edit mr-2"></span>Notendaupplýsingar</h6>
+            </a>
+            <a id="search_history_btn" href="{% url 'search-history' %}" class="btn d-block yellow-background m-2">
+                <h6 class="font-weight-bold my-2"><span class="fas fa-search mr-2"></span>Leitarsaga</h6>
+            </a>
+        </div>
+        <div class="col">
+            <h3 class="font-weight-bold mb-4">Leitarsaga:</h3>
+            <div class="mr-5">
+                {% for search in search_history %}
+                    <a href="{% url 'leit' %}?leit={{ search.search }}" class="btn border border-dark btn-light d-block text-left m-2 mr-5">{{ search.search }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
