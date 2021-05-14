@@ -12,10 +12,17 @@ for(var i = 0;i < updateBtns.length;i++){
         console.log ('User', User)
         if (User === 'AnonymousUser'){
             console.log('Not logged in')
+            alert('Þú þarft að vera innskráð(ur) til að bæta í körfu')
         }
         else{
             updateUserOrder(cerealId, action)
-            alert('Successfully added to cart')
+            if (action === 'add') {
+                alert('Vara sett í körfu')
+            }
+            else{
+                alert('Vara fjarlægð úr körfu')
+                location.reload()
+            }
         }
     })}
 

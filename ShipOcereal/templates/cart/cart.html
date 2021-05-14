@@ -4,11 +4,20 @@
     <h1>Cart</h1>
     {% for item in cartContent %}
     <div class="cartItemContainer">
-        <p>Cereal: {{ item.product_name }}</p>
-        <p>Quantity: {{ item.quantity }}</p>
-        <p>Price: {{ item.prod_price }}</p>
+        <p>Morgunkorn: {{ item.product_name }}</p>
+        <p>Magn: {{ item.quantity }}</p>
+        <p>Verð: {{ item.prod_price }}</p>
         <span> </span>
+    <button class="addToCart" data-cereal="{{ item.id }}" data-action="remove">
+        Fjarlæga úr Körfu
+    </button>
     </div>
     {% endfor %}
+    </div>
+    <div class="finishOrder">
+    <a href="{% url 'paymentstep1' %}">
+        <button>Klára pöntun</button>
+        </a>
+        <h3>Alls: {{ total }}</h3>
     </div>
 {% endblock %}

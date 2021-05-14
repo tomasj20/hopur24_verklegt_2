@@ -1,13 +1,13 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
 <div class="singleCerealContainer">
+    <a href="/{{ cereal.id }}">
     <div class="singleCerealImageAndName">
         <img class="cereal-img" src="{{ cereal.image.path }}"/>
         <h2>{{ cereal.name }}</h2>
     </div>
-    <a href="/{{ cereal.id }}">
         <button class="sjáNánar">Sjá Nánar</button>
     </a>
-    <button class="addToCart">Bæta í Körfu</button>
+    <button class="addToCart" data-cereal="{{ cereal.id }}" data-action="add">Bæta í Körfu</button>
     <h4>{{ cereal.price }} Kr</h4>
 </div>

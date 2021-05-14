@@ -29,5 +29,8 @@ urlpatterns = [
     path('create_cereal2/',include('home.urls')),
     path('update_cereal', include('home.urls')),
     path('user/', include('user.urls')),
-    path('update_item', include('user.urls'))
+    path('update_item', include('user.urls')),
+    path('paymentstep1',include('cart.urls')),
+    path('paymentstep2',include('cart.urls')),
+    path('paymentstep3',include('cart.urls'))
 ]

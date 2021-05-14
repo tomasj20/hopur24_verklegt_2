@@ -1,6 +1,7 @@
 from django.db import models
 from user.models import user_info
 from django.contrib.auth.models import User
+from creditcards.models import CardNumberField, CardExpiryField, SecurityCodeField
 # Create your models here.
 
 class cerealCategory(models.Model):
@@ -45,16 +46,26 @@ class Cart(models.Model):
     shipping = models.CharField(max_length=50)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True, null=True)
 
+
 class CartProduct(models.Model):
     product_id = models.IntegerField(default=1)
     product_name = models.CharField(max_length=255, default="")
     prod_price = models.IntegerField()
-    quantity = models.IntegerField()
+    quantity = models.IntegerField(default=0)
     cart = models.ForeignKey(Cart, on_delete=models.DO_NOTHING)
 
 class Order(models.Model):
     total = models.IntegerField()
     cart = models.ForeignKey(Cart, on_delete=models.DO_NOTHING)
+
+class paymentInfo(models.Model):
+    user = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True, null=True)
+    creditCardNumber = CardNumberField('card number')
+    expiryDate = CardExpiryField('expiration dae')
+    cvv = SecurityCodeField('security code')
+
+
+
 
 
 
