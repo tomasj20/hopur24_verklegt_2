@@ -9,6 +9,7 @@ from user.forms.profile_form import ProfileForm
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from cart.forms.paymentForm import PaymentForm
+
 def index(request):
     user = request.user
     userInfo = user_info.objects.filter(user=user.id).first()
@@ -22,8 +23,8 @@ def index(request):
         total += item.prod_price
 
 
-    context = {'user':userInfo,'cartContent':cartItems,'total':total}
-    return render(request, "cart/cart.html",context)
+    context = {'user':userInfo, 'cartContent':cartItems, 'total':total}
+    return render(request, "cart/cart.html", context)
 
 
 def paymentStep1(request):
@@ -54,10 +55,23 @@ def paymentStep2(request):
     })
 
 def paymentStep3(request):
-    userinfo = user_info.objects.filter(user=request.user).first()
+    userInfo = user_info.objects.filter(user=request.user).first()
     paymentinfo = paymentInfo.objects.filter(user=request.user).first()
-    order
+    cart = paymentInfo.objects.filter(user=request.user).first()
+    cartitems = CartProduct.objects.filter(cart_id=cart.id)
+    if cart == None:
+        cart = Cart.objects.filter(userInfo_id=userInfo.id).first()
+    total = 0
+    for item in cartitems:
+        total += item.prod_price
+
+
+
+
     return render(request,'cart/paymentstep3.html',{
-        'user':userinfo,
-        'payment':paymentinfo
+        'user': userInfo,
+        'payment':paymentinfo,
+        'cart':cart,
+        'cartitems': cartitems,
+        'totalP': total
     })

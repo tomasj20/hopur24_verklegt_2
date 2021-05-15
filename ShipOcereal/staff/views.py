@@ -96,7 +96,7 @@ def update_cereal(request, id):
         form = CerealUpdateForm(data=request.POST, instance=instance)
         if form.is_valid():
             form.save()
-            return redirect('admin-cereal-details', pk=id)
+            return redirect('admin-cereal-details', id=id)
     else:
         form = CerealUpdateForm(instance=instance)
     return render(request, 'admin/update_cereal.html', {
