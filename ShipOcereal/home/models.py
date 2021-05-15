@@ -54,6 +54,9 @@ class CartProduct(models.Model):
     quantity = models.IntegerField(default=0)
     cart = models.ForeignKey(Cart, on_delete=models.DO_NOTHING)
 
+    def __str__(self):
+        return self.product_name
+
 class Order(models.Model):
     total = models.IntegerField()
     cart = models.ForeignKey(Cart, on_delete=models.DO_NOTHING)

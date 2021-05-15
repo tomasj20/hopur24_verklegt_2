@@ -11,22 +11,6 @@ TEMPLATE_DIRS = (
     'os.path.join(BASE_DIR, "templates"),'
 )
 
-def login_staff_view(request):
-    logout(request)
-    if request.method == 'POST':
-        username = request.POST["username"]
-        password = request.POST["password"]
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            if user.is_staff or user.is_superuser:
-                login(request, user)
-                return redirect("admin/admin_home.html")
-        form = AuthenticationForm(request.POST)
-        return render(request, "user/login/login.html", {'form': form})
-    else:
-        form = AuthenticationForm()
-        return render(request, "user/login/login.html", {'form': form})
-
 def index(request):
     return render(request, "admin/admin_home.html")
 

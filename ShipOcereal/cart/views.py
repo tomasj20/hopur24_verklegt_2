@@ -55,23 +55,17 @@ def paymentStep2(request):
     })
 
 def paymentStep3(request):
-    userInfo = user_info.objects.filter(user=request.user).first()
+    user = request.user
+    userInfo = user_info.objects.filter(user=user.id).first()
     paymentinfo = paymentInfo.objects.filter(user=request.user).first()
     cart = paymentInfo.objects.filter(user=request.user).first()
-    cartitems = CartProduct.objects.filter(cart_id=cart.id)
     if cart == None:
         cart = Cart.objects.filter(userInfo_id=userInfo.id).first()
+    cartitems = CartProduct.objects.filter(cart_id=cart.id)
     total = 0
     for item in cartitems:
         total += item.prod_price
 
+    context = {'user':userInfo, 'payment':paymentinfo, 'cart':cart, 'cartitems': cartitems, 'total': total}
+    return render(request, "cart/paymentstep3.html", context)
 
-
-
-    return render(request,'cart/paymentstep3.html',{
-        'user': userInfo,
-        'payment':paymentinfo,
-        'cart':cart,
-        'cartitems': cartitems,
-        'totalP': total
-    })

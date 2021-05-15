@@ -12,5 +12,5 @@ class PaymentForm(ModelForm):
         widgets = {
                 'creditCardNumber': TextInput(attrs={'placeholder': 'Card Number'}),
                 'expiryDate': TextInput(attrs={'placeholder': 'Ex: 123'}),
-                'cvv': TextInput(attrs={'placeholder': 'Email'}),
+                'cvv': TextInput(attrs={'placeholder': 'Gildistími'}),
             }

@@ -5,7 +5,7 @@
     <h1>Order:</h1>
         <h3>Nafn: {{user.full_name}}</h3>
         <h3>Heimilisfang: {{user.address }}</h3>
-        <h3>Póstnúmer: {{ user.zipcode }}</h3>
+        <h3>Póstnúmer: {{ user.zip_code }}</h3>
         <h3>Bæjarfélag: {{ user.town }}</h3>
         <h3>Land: {{ user.country }}</h3>
     <span>
@@ -16,13 +16,14 @@
         <h3>CVV: {{ payment.cvv }}</h3>
     <h2>Items:</h2>
         {% for cereal in cartitems %}
-            <h3> Product name: {{ cereal.product_name }}</h3>
+            <h3> Product name: {{ cereal }}</h3>
             <span></span>
         {% endfor %}
     <span></span>
     <h2>Total: </h2>
-        <h3>Order total: {{ totalP }}</h3>
+        <h3>Order total: {{ total }}</h3>
         <span>
         </span>
+    <a href="{% url 'index' %}" class="block btn btn-primary">Aftur á heimasíðu</a>
     </div>
 {% endblock %}
