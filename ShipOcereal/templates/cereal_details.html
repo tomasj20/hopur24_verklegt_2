@@ -7,7 +7,7 @@
         <h2>{{ cereal.name }}</h2>
         <p>{{ cereal.description }}</p>
         <h4> {{ cereal.price }}kr </h4>
-        <a href="{% url 'index'  %}" class="block btn btn-primary">Bæta í körfu</a>
+        <button class="addToCart" data-cereal="{{ cereal.id }}" data-action="add">Bæta í Körfu</button>
         <a href="{% url 'index'  %}" class="block btn btn-primary">Tilbaka</a>
     </div>
     </div>
